@@ -1,0 +1,30 @@
+import React from 'react';
+import '.App.css';
+import { useNavigate } from 'react-router-dom';
+
+function App() {
+  const navigate = useNavigate();
+  
+  const handleGetStarted = () => {
+    navigate('/products'); // Links to ProductList page
+  };
+
+  return (
+    <div className="App">
+      <header className="landing-header">
+        <h1 className="company-name">🌿 Paradise Nursery</h1>
+        <p className="tagline">Your premier destination for exotic plants</p>
+        <p>Sulthan Bathery, Kerala | 50+ Plant Varieties</p>
+        
+        <button 
+          className="get-started-btn"
+          onClick={handleGetStarted}
+        >
+          Get Started →
+        </button>
+      </header>
+    </div>
+  );
+}
+
+export default App;
